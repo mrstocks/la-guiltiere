@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/superfish.css">
+    <link rel="stylesheet" href="font/font-awesome.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/TMForm.js"></script>
+
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+    </head>
+    <body>
+<!--==============================header=================================-->
+<header>
+    <div class="container_12">
+        <div class="row">
+            <div class="grid_12">
+                <nav>
+                    <ul class="sf-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index-1.html">About</a>
+                            <ul>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Our staff</a></li>
+                                <li><a href="#">What’s new?</a>
+                                    <ul>
+                                        <li><a href="#">Archive</a></li>
+                                        <li><a href="#">Fresh news</a></li>
+                                    </ul>
+                                </li>
+                           </ul>
+                        </li>
+                        <li><a href="index-2.html">Services</a></li>
+                        <li><a href="index-3.html">Booking</a></li>
+                        <li><a href="index-4.html">Rooms</a></li>
+                        <li class="current"><a href="index-5.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="bg-1-wrapper">
+        <img src="images/slide-1.jpg" alt="" class="inside">
+        <div class="bg-1">
+            <h1><a href="index.html"><img src="images/logo.png" alt="Virginia Hotel- Luxury hotel since 1985"></a></h1>
+        </div>
+    </div>
+</header>
+
+<!--=======content================================-->
+<section class="content">
+    <div class="bord-1">
+        <div class="container_12 contacts">
+            <div class="grid_12">
+                <div class="row">
+                    <div class="map_wrapper col-1">
+                        <h2 class="v2">how to find us</h2>
+                        <div class="img-bord">
+                            <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulu molestie lacus. Aenean innonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes.nascetur ridiculus mus. </p>
+                        <dl class="address">
+                            <dt>8901 Marmora Road, <br> Glasgow, D04 89GR.</dt>
+                            <dd><span>Freephone:</span>+1 800 559 6580</dd>
+                            <dd><span>Telephone:</span>+1 800 603 6035</dd>
+                            <dd><span>FAX:</span>+1 800 889 9898 </dd>
+                            <dd><span class="e-mail">E-mail: <a href="#" class="demo color-1">mail@demolink.org</a></span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>contact form</h2>
+                    <form id="contact-form" class="clearfix">
+                        <div class="success-message">Contact form submitted.</div>
+                        <fieldset class="fleft">
+                            <label class="name">
+                                <input type="text" placeholder="Name:" data-constraints="@Required @JustLetters" />
+                                <span class="empty-message">*This field is required.</span>
+                                <span class="error-message">*This is not a valid name.</span>
+                            </label>
+                            <label class="email">
+                                <input type="text" placeholder="E-mail:" data-constraints="@Required @Email" />
+                                <span class="empty-message">*This field is required.</span>
+                                <span class="error-message">*This is not a valid email.</span>
+                            </label>
+                            <label class="phone">
+                                <input type="text" placeholder="Phone:" data-constraints="@Required @JustNumbers"/>
+                                <span class="empty-message">*This field is required.</span>
+                                <span class="error-message">*This is not a valid phone.</span>
+                            </label>
+                        </fieldset>
+                        <fieldset class="fright">
+                            <label class="message">
+                                <textarea placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                                <span class="empty-message">*This field is required.</span>
+                                <span class="error-message">*The message is too short.</span>
+                            </label>
+                        </fieldset>
+                        <div class="form_buttons">
+                            <a href="#" data-type="submit" class="link">send message</a>
+                        </div>  
+                    </form>     
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=======footer=================================-->
+<footer>
+    <div class="container_12">
+        <div class="row">
+            <div class="grid_12">
+                <div class="fright ind-1">
+                    <ul class="list-services clearfix">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                </div>
+                <div class="fleft ind-1">
+                    <a href="#" class="h-underline">Virginia hotel</a> &copy; <span id="copyright-year"></span> &nbsp; | &nbsp; <a href="index-6.html" class="a-hov color-2">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
