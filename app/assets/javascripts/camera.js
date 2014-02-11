@@ -1,4 +1,4 @@
-// Camera slideshow v1.3.3 - a jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile ready, based on jQuery 1.4+
+// Camera slideshow v1.3.4 - a jQuery slideshow with many effects, transitions, easy to customize, using canvas and mobile ready, based on jQuery 1.4+
 // Copyright (c) 2012 by Manuel Masia - www.pixedelic.com
 // Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 ;(function($){$.fn.camera = function(opts, callback) {
@@ -45,7 +45,7 @@
 		
 		loaderStroke		: 7,	//the thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the pie diameter
 				
-		minHeight			: '0',	//you can also leave it blank
+		minHeight			: '200px',	//you can also leave it blank
 		
 		navigation			: true,	//true or false, to display or not the navigation buttons
 		
@@ -461,6 +461,7 @@
 							t.css({
 								'height' : hT*r,
 								'margin-left' : 0,
+								'margin-right' : 0,
 								'margin-top' : mTop,
 								'position' : 'absolute',
 								'visibility' : 'visible',
@@ -502,6 +503,7 @@
 							t.css({
 								'height' : h,
 								'margin-left' : mLeft,
+								'margin-right' : mLeft,
 								'margin-top' : 0,
 								'position' : 'absolute',
 								'visibility' : 'visible',
@@ -544,6 +546,7 @@
 							t.css({
 								'height' : h,
 								'margin-left' : mLeft,
+								'margin-right' : mLeft,
 								'margin-top' : 0,
 								'position' : 'absolute',
 								'visibility' : 'visible',
@@ -585,6 +588,7 @@
 							t.css({
 								'height' : hT*r,
 								'margin-left' : 0,
+								'margin-right' : 0,
 								'margin-top' : mTop,
 								'position' : 'absolute',
 								'visibility' : 'visible',
@@ -715,7 +719,33 @@
 			}
 		}
 
-		
+		if(navHover==true){
+			$(prevNav,wrap).animate({opacity:0},0);
+			$(nextNav,wrap).animate({opacity:0},0);
+			$(commands,wrap).animate({opacity:0},0);
+			if(isMobile()){
+				fakeHover.live('vmouseover',function(){
+					$(prevNav,wrap).animate({opacity:1},200);
+					$(nextNav,wrap).animate({opacity:1},200);
+					$(commands,wrap).animate({opacity:1},200);
+				});
+				fakeHover.live('vmouseout',function(){
+					$(prevNav,wrap).delay(500).animate({opacity:0},200);
+					$(nextNav,wrap).delay(500).animate({opacity:0},200);
+					$(commands,wrap).delay(500).animate({opacity:0},200);
+				});
+			} else {
+				fakeHover.hover(function(){
+					$(prevNav,wrap).animate({opacity:1},200);
+					$(nextNav,wrap).animate({opacity:1},200);
+					$(commands,wrap).animate({opacity:1},200);
+				},function(){
+					$(prevNav,wrap).animate({opacity:0},200);
+					$(nextNav,wrap).animate({opacity:0},200);
+					$(commands,wrap).animate({opacity:0},200);
+				});
+			}
+		}
 		
 	
 		$('.camera_stop',camera_thumbs_wrap).live('click',function(){
