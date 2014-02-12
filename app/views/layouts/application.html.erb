@@ -6,9 +6,10 @@
     <meta name = "format-detection" content = "telephone=no" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <%= stylesheet_link_tag "camera"; %>
-    <%= stylesheet_link_tag "style"; %>
+    
     <%= yield :stylesheet %>
+    
+    <%= stylesheet_link_tag "style"; %>
 
     <%= stylesheet_link_tag "superfish"; %>
     <%= stylesheet_link_tag "font-awesome"; %>
@@ -20,7 +21,8 @@
     <%= javascript_include_tag "superfish"; %> 
     <%= javascript_include_tag "query.mobilemenu"; %>
     <%= javascript_include_tag "jquery.mobilemenu"; %>
-    <%= javascript_include_tag "camera"; %>
+    
+    <%= yield :javascript %>
 
     <!--[if (gt IE 9)|!(IE)]><!-->
       <%= javascript_include_tag "jquery.mobile.customized.min" %>
@@ -28,23 +30,10 @@
         
     <%= javascript_include_tag "jquery.ui.totop" %>
     <%= javascript_include_tag "TMForm" %>
-    <script>
-        $(window).load(function() {
-            jQuery('#camera_wrap_1').camera({
-                height: '40.7%',
-                playPause: false,
-                time: 8000,
-                transPeriod: 1000,
-                fx: 'simpleFade',
-                loader: 'none',
-                minHeight:'150px',
-                navigation: false,
-                pagination: true,
-            });
-        })
-    </script>
 
-    <!--[if lt IE 8]>
+    <%= yield :script %>
+
+     <!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />

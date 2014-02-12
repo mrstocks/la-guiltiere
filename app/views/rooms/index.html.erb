@@ -1,0 +1,78 @@
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "touchTouch" %>
+<% end %>
+
+<%= content_for :javascript do %>
+  <%= javascript_include_tag "touchTouch.jquery" %>
+<% end %>
+
+<% content_for :script do %>
+    <script>
+        $(window).load(function() {
+            $('.magnifier').touchTouch();
+        })
+    </script>
+ 
+<% end %>
+
+<%= content_for :header_banner do %>
+   <div class="bg-1-wrapper"> 
+        <%= image_tag("slide-1.jpg", :class => "inside") %>
+        <div class="bg-1">
+            <h1><%= link_to image_tag("logo.png"), root_url %></h1>
+        </div>
+    </div>
+<% end %>
+
+    <div class="bord-1">
+        <div class="container_12">
+            <div class="row">
+                <div class="grid_12"><h2 class="v2">rooms</h2></div>
+            </div>
+            <div class="row">
+                <div class="grid_3">
+                    <div class="block-4">
+                        <div class="clearfix">
+                            <div class="img-ind"><i class="fa fa-key"></i></div>
+                            <div class="extra-wrap">
+                                <h3>the deluxe queen size rooms</h3>
+                            </div>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulu molestie lacus. Aenean innonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius. </div>
+                    </div>
+                    <div class="block-4">
+                        <div class="clearfix">
+                            <div class="img-ind"><i class="fa fa-key"></i></div>
+                            <div class="extra-wrap">
+                                <h3>the deluxe twin size rooms</h3>
+                            </div>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulu molestie lacus. Aenean innonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius. </div>
+                    </div>
+                    <div class="block-4">
+                        <div class="clearfix">
+                            <div class="img-ind"><i class="fa fa-key"></i></div>
+                            <div class="extra-wrap">
+                                <h3>the deluxe ocean front suites</h3>
+                            </div>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulu molestie lacus. Aenean innonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius. </div>
+                    </div>
+                </div>
+                <div class="grid_9">
+                    <div class="gallery grid_inside">
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-1-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-1.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-2-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-2.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-3-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-3.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-4-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-4.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-5-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-5.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-6-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-6.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-7-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-7.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-8-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-8.jpg" alt=""></span></a></div>
+                        <div class="grid_3 box-3"><a href="/assets/page-5_img-9-b.jpg" class="magnifier"><span class="img-bord"><img src="/assets/page-5_img-9.jpg" alt=""></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

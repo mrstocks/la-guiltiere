@@ -8,7 +8,7 @@ Laguiltiere::Application.routes.draw do
   get "home", to: "pages#home", as: "home"
   get "inside", to: "pages#inside", as: "inside"
   get "contact_us/index"
-  
+  get "rooms", :controller => "rooms", :action => :index
     
   devise_for :users
   
