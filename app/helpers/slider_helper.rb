@@ -20,7 +20,6 @@ module SliderHelper
                 </div>
             </div>"
     end
-     
     output 
   end
 end
