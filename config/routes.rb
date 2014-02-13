@@ -9,7 +9,7 @@ Laguiltiere::Application.routes.draw do
   get "inside", to: "pages#inside", as: "inside"
   get "contact_us/index"
   get "rooms", :controller => "rooms", :action => :index
-    
+  get "bookings", :controller => "booking", :action => :index    
   devise_for :users
   
   #namespace :admin do

@@ -3,7 +3,7 @@
             <div class="grid_12">
                 <nav>
                     <ul class="sf-menu">
-                        <li <% if  params[:controller] == "pages"%> class="current" <% end %>><%= link_to "Home", root_url %></li>
+                        <li <% if controller.controller_name == "pages"%> class="current" <% end %>><%= link_to "Home", root_url %></li>
                         <li><a href="index-1.html">About</a>
                             <ul>
                                 <li><a href="#">History</a></li>
@@ -17,9 +17,9 @@
                            </ul>
                         </li>
                         <li><a href="index-2.html">Services</a></li>
-                        <li><a href="index-3.html">Booking</a></li>
-			<li <% if  params[:controller] == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>
-                        <li <% if  params[:controller] == "contact_us"%> class="current" <% end %>><%= link_to "Contact",  contact_us_index_path  %></li>
+                        <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Booking", bookings_path %></li>
+			<li <% if controller.controller_name == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>
+                        <li <% if controller.controller_name == "contact_us"%> class="current" <% end %>><%= link_to "Contact",  contact_us_index_path  %></li>
                     </ul>
                 </nav>
             </div>
