@@ -6,13 +6,18 @@
         </div>
     </div>
 <% end %>
-
     <div class="bord-1">
         <div class="container_12">
             <div class="row">
                 <div class="grid_8">
                     <h2 class="v2">booking form</h2>
                     <form class="form-1">
+   <%= form_for :booking do |f| %>
+      <%= f.text_field :email %>
+
+      <%= f.submit %>
+    <% end %>
+  
                         <fieldset>
                             <span>Arrival:</span>
                             <input type="text">
@@ -181,4 +186,3 @@
             </div>
         </div>
     </div>
-

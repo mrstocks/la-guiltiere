@@ -6,7 +6,9 @@
 
 	html, body {
 		background: #332530 url(/assets/bg-2.gif) 0 0 repeat;
-		font: 12px/18px Arial, sans-serif;
+               font: 15px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+	       /*	font: 12px/18px Arial, sans-serif;*/
 		color: #8b7b88;
 		min-width:300px;
 	}
