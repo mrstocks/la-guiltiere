@@ -11,125 +11,26 @@
             <div class="row">
                 <div class="grid_8">
                     <h2 class="v2">booking form</h2>
-                    <form class="form-1">
-   <%= form_for :booking do |f| %>
-      <%= f.text_field :email %>
-
-      <%= f.submit %>
-    <% end %>
-  
+                    <%= form_for :booking, html: { class: "form-1" } do |f| %>
+ 
                         <fieldset>
                             <span>Arrival:</span>
-                            <input type="text">
+                            <%= f.text_field :arrival %>
                             <div class="styled-select">
-                                <select>
-                                    <option>Month :</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                </select>
+                              <%= select_month(Date.today, field_name: 'day_of_arrival', add_month_numbers: true) %>
                             </div>
                             <div class="styled-select">
-                                <select>
-                                    <option>Day :</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                    <option>24</option>
-                                    <option>25</option>
-                                    <option>26</option>
-                                    <option>27</option>
-                                    <option>28</option>
-                                    <option>29</option>
-                                    <option>30</option>
-                                    <option>31</option>
-                                </select>
+                              <%= select_day(Time.now, field_name: 'month_of_arrival') %>
                             </div>
                         </fieldset>
                         <fieldset>
                             <span>Departure:</span>
                             <input type="text">
                             <div class="styled-select">
-                                <select>
-                                    <option>Month :</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                </select>
+                              <%= select_month(Date.today + 3, field_name: 'date_of_departure', add_month_numbers: true) %>
                             </div>
                             <div class="styled-select">
-                                <select>
-                                    <option>Day :</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                    <option>24</option>
-                                    <option>25</option>
-                                    <option>26</option>
-                                    <option>27</option>
-                                    <option>28</option>
-                                    <option>29</option>
-                                    <option>30</option>
-                                    <option>31</option>
-                                </select>
+                              <%= select_day(Time.now, field_name: 'month_of_departure') %>
                             </div>
                         </fieldset>
                         <fieldset class="line-3">
@@ -152,7 +53,10 @@
                             <input type="text" class="ind-left">
                         </fieldset>
                     </form>
-                    <div class="title-4"><a href="#" class="h-underline">check availability</a></div>
+
+      <%= f.submit %>
+    <% end %>
+ 
                     <h2>book a spa day</h2>
                     <div class="clearfix">
                         <div class="img-bord w1 img-ind"><%= image_tag("page-4_img-1.jpg"); %></div>
