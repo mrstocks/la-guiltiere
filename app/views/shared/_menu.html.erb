@@ -3,11 +3,11 @@
             <div class="grid_12">
                 <nav>
                     <ul class="sf-menu">
-                        <li <% if controller.controller_name == "pages"%> class="current" <% end %>><%= link_to "Home", root_url %></li>
-                        <li><a href="index-1.html">About the house</a>
+                        <li <% if ((controller.controller_name == "pages") && (controller.action_name == "home"))%> class="current" <% end %>><%= link_to "Home", root_url %></li>
+                        <li <% if ((controller.controller_name == "pages") && (controller.action_name != "home"))%> class="current" <% end %>><%= link_to "About the house", about_the_house_path %>
                             <ul>
-                                <li><a href="#">Gardens</a></li>
-                                <li><a href="#">Gypsie caravane</a></li>
+                                <li><%= link_to "Garden", about_the_garden_path %></li>
+                                <li><%= link_to "Caravane", about_the_caravan_path %></li>
                                 <li><a href="#">Around here</a>
                                     <ul>
                                         <li><a href="#">Lassay les chateaux</a></li>
