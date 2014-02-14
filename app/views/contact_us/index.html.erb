@@ -27,14 +27,13 @@
                             <dt>53110 thuboeuf <br>la guiltiere  France</dt>
                             <dd><span>Freephone:</span>+1 800 559 6580</dd>
                             <dd><span>Telephone:</span>+1 800 603 6035</dd>
-                            <dd><span>FAX:</span>+1 800 889 9898 </dd>
-                            <dd><span class="e-mail">E-mail: <a href="#" class="demo color-1">mail@demolink.org</a></span></dd>
+                            <dd><span class="e-mail">E-mail: <a href="mailto:jenny@la-guiltiere.fr" class="demo color-1">jenny@la-guiltiere.fr</a></span></dd>
                         </dl>
                     </div>
                 </div>
                 <div class="row">
                     <h2>contact form</h2>
-							<%= form_for :contact_us, html: { class: "clearfix", id: "contact-form" } do |f| %>
+                    <%= form_for :contact_us, html: { class: "clearfix", id: "contact-form-no-warming" } do |f| %>
                         <fieldset class="fleft">
                             <label class="name">
                             	  <span>Name:</span>
@@ -66,8 +65,7 @@
                         <div class="form_buttons">
                             <%= f.submit %>
                         </div>
-    					<% end %>
-
+                     <% end %>
                 </div>
             </div>
         </div>
