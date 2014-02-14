@@ -16,7 +16,7 @@ Laguiltiere::Application.routes.draw do
 
   get "inside", to: "pages#inside", as: "inside"
 
-  get "contact_us/index"
+  get "contact_us", :controller => "contact_us", :action => :index
   post "contact_us", :controller => "contact_us", :action => :create
 
   get "rooms", :controller => "rooms", :action => :index
