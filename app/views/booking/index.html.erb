@@ -1,3 +1,7 @@
+<% content_for :stylesheet do %>
+  <%= stylesheet_link_tag "booking" %>
+<% end %>
+
 <%= content_for :header_banner do %>
    <div class="bg-1-wrapper"> 
         <%= image_tag("slide-1.jpg", :class => "inside") %>
@@ -51,7 +55,7 @@
                               <%= f.text_field :telephone %>
                         </fieldset>
                      <br style="clear: all;"/>
-                     <%= f.submit "Send us the inquiry"%>
+                     <%= f.submit value:'Send us the inquiry', class:"inquiry-btn" %>
                     <% end %>
  
                     <h2>book a spa day</h2>
