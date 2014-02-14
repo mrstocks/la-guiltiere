@@ -38,15 +38,17 @@
                             <div class="styled-select">
                               <%= select_tag "people_on_board","<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>More..</option>".html_safe %>
                             </div>
-                            <span class="span-2">Animals? </span>
-                            <%= f.text_field :animals %>
+                            <span class="span-2">Animals:</span>
+                                <%= f.text_field :animals %>
                         </fieldset>
                     
-                        <fieldset>
+                        <fieldset class="line-3">
                             <span>Email :</span>
+                            <div class="styled-select">
                               <%= f.text_field :email, :html => ["data-constraints" => "@Required @Email"] %>
+                              </div>
                             <span class="span-2">Telephone:</span>
-                            <%= f.text_field :telephone %>
+                              <%= f.text_field :telephone %>
                         </fieldset>
                      <br style="clear: all;"/>
                      <%= f.submit "Send us the inquiry"%>
