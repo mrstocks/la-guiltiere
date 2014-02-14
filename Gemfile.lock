@@ -79,6 +79,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (2.0.2)
     figaro (0.7.0)
       bundler (~> 1.0)
@@ -188,6 +189,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.1)
   devise (~> 3.2.2)
+  event-calendar
   figaro (~> 0.7.0)
   font-awesome-sass (~> 4.0.2)
   formtastic!

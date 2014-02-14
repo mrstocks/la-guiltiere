@@ -4,19 +4,19 @@
                 <nav>
                     <ul class="sf-menu">
                         <li <% if controller.controller_name == "pages"%> class="current" <% end %>><%= link_to "Home", root_url %></li>
-                        <li><a href="index-1.html">About</a>
+                        <li><a href="index-1.html">About the house</a>
                             <ul>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Our staff</a></li>
-                                <li><a href="#">What’s new?</a>
+                                <li><a href="#">Gardens</a></li>
+                                <li><a href="#">Gypsie caravane</a></li>
+                                <li><a href="#">Around here</a>
                                     <ul>
-                                        <li><a href="#">Archive</a></li>
-                                        <li><a href="#">Fresh news</a></li>
+                                        <li><a href="#">Lassay les chateaux</a></li>
+                                        <li><a href="#">Bagnoles de L'ornes</a></li>
                                     </ul>
                                 </li>
                            </ul>
                         </li>
-                        <li><a href="index-2.html">Services</a></li>
+                        <li <% if controller.controller_name == "calendar" %> class="current" <% end %>><%= link_to "Rates", calendar_path %></li>
                         <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Booking", bookings_path %></li>
 			<li <% if controller.controller_name == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>
                         <li <% if controller.controller_name == "contact_us"%> class="current" <% end %>><%= link_to "Contact",  contact_us_index_path  %></li>

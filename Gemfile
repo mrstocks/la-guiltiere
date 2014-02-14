@@ -43,4 +43,4 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem 'activeadmin',         :github => 'gregbell/active_admin'
 gem 'formtastic',          :github => 'justinfrench/formtastic'
-
+gem 'event-calendar', :require => 'event_calendar'
