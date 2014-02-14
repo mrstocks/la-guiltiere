@@ -17,45 +17,40 @@
                             <span>Arrival:</span>
                             <%= f.text_field :arrival %>
                             <div class="styled-select">
-                              <%= select_month(Date.today, field_name: 'day_of_arrival', add_month_numbers: true) %>
+                              <%= select_month(Date.today, field_name: 'month_of_arrival', add_month_numbers: true) %>
                             </div>
                             <div class="styled-select">
-                              <%= select_day(Time.now, field_name: 'month_of_arrival') %>
+                              <%= select_day(Time.now, field_name: 'day_of_arrival') %>
                             </div>
                         </fieldset>
                         <fieldset>
                             <span>Departure:</span>
-                            <input type="text">
+                              <%= f.text_field :departure %>
                             <div class="styled-select">
-                              <%= select_month(Date.today + 3, field_name: 'date_of_departure', add_month_numbers: true) %>
+                              <%= select_month(Date.today, field_name: 'month_of_departure', add_month_numbers: true) %>
                             </div>
                             <div class="styled-select">
-                              <%= select_day(Time.now, field_name: 'month_of_departure') %>
+                              <%= select_day(Time.now, field_name: 'day_of_departure') %>
                             </div>
                         </fieldset>
                         <fieldset class="line-3">
                             <span>People :</span>
                             <div class="styled-select">
-                                <select>
-                                    <option> </option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>more...</option>
-                                </select>
+                              <%= select_tag "people_on_board","<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>More..</option>".html_safe %>
                             </div>
                             <span class="span-2">Animals? </span>
-                            <input type="text" class="ind-left">
+                            <%= f.text_field :animals %>
                         </fieldset>
-                    </form>
-
-      <%= f.submit %>
-    <% end %>
+                    
+                        <fieldset>
+                            <span>Email :</span>
+                              <%= f.text_field :email %>
+                            <span class="span-2">Telephone:</span>
+                            <%= f.text_field :telephone %>
+                        </fieldset>
+                     <br style="clear: all;"/>
+                     <%= f.submit%>
+                    <% end %>
  
                     <h2>book a spa day</h2>
                     <div class="clearfix">

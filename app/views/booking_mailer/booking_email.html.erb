@@ -4,8 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-   <%= debug :params %>
-
-
+   Hello i'm the booking system on the website :<br />
+   <br />
+   Time of arrival : <%= @text[:arrival]; %>, <%= @date['day_of_arrival'] %>/<%= @date['month_of_arrival'] %> (formate time/day/month)<br />
+   Time of departure : <%= @text[:departure] %> <%= @date["day_of_departure"] %>/<%= @date["month_of_departure"] %><br />
+   Animals : <%= @text[:animals] %><br />
+   Email : <%= @text[:email] %><br />
+   Telephone :<%= @text[:telephone] %> <br />
+   People : <%= @people %>
   </body>
 </html>  
