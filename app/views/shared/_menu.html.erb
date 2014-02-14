@@ -17,7 +17,7 @@
                            </ul>
                         </li>
                         <li <% if controller.controller_name == "calendar" %> class="current" <% end %>><%= link_to "Rates", calendar_path %></li>
-                        <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Booking", bookings_path %></li>
+                        <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Inquiries", inquiries_path %></li>
 			<li <% if controller.controller_name == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>
                         <li <% if controller.controller_name == "contact_us"%> class="current" <% end %>><%= link_to "Contact",  contact_us_index_path  %></li>
                     </ul>

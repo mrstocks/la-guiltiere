@@ -11,8 +11,8 @@ Laguiltiere::Application.routes.draw do
   get "contact_us/index"
   post "contact_us", :controller => "contact_us", :action => :create
   get "rooms", :controller => "rooms", :action => :index
-  get "bookings", :controller => "booking", :action => :index    
-  post "bookings", :controller => "booking", :action => :create    
+  get "inquiries", :controller => "booking", :action => :index    
+  post "inquiries", :controller => "booking", :action => :create    
   get "prices", :controller => "prices", :action => :index  
 
   devise_for :users

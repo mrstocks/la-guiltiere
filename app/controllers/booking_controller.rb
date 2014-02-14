@@ -1,4 +1,6 @@
 class BookingController < ApplicationController
+  before_filter :get_site_title
+
  
   public
     def index
@@ -15,6 +17,10 @@ class BookingController < ApplicationController
     end
 
   private 
+    def get_site_title 
+      @title = "La Guiltiere - Inquiries"
+    end 
+  
     def booking_text_params
       params.require(:booking).permit(:arrival, :departure, :animals, :email, :telephone)
     end
