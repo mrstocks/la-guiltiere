@@ -1,0 +1,8 @@
+.form-1 .inquiry-btn{
+	background-color: #362732;
+}
+
+.form-1 .inquiry-btn:hover,
+.form-1 .inquiry-btn:focus{
+	background-color: #461539;
+}
