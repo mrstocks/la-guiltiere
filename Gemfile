@@ -13,6 +13,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'mysql2'
+
 # development gems
 group :development, :test do
   gem 'sqlite3', '~> 1.3.8'    # dev & test database
@@ -29,7 +31,6 @@ gem 'friendly_id', '~> 5.0.2'
 gem 'font-awesome-sass', '~> 4.0.2'
 
 # Devise
-gem 'devise', '~> 3.2.2'
 
 
 # Bootstrap 3
@@ -41,6 +42,12 @@ gem "carrierwave"
 gem 'rmagick'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
+gem 'event-calendar', :require => 'event_calendar'
+gem 'devise',              :github => 'plataformatec/devise'
+gem 'responders',          :github => 'plataformatec/responders'
+gem 'inherited_resources', :github => 'josevalim/inherited_resources'
+gem 'ransack',             :github => 'ernie/ransack'
 gem 'activeadmin',         :github => 'gregbell/active_admin'
 gem 'formtastic',          :github => 'justinfrench/formtastic'
-gem 'event-calendar', :require => 'event_calendar'
+gem "carrierwave"
+gem 'passenger'

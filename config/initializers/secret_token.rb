@@ -9,17 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-def secure_token
-  token_file = Rails.root.join('.secret')
-  if File.exist?(token_file)
-    # Use the existing token.
-    File.read(token_file).chomp
-  else
-    # Generate a new token and store it in token_file.
-    token = SecureRandom.hex(64)
-    File.write(token_file, token)
-    token
-  end
-end
-
-Laguiltiere::Application.config.secret_key_base = secure_token
+Laguiltiere2::Application.config.secret_key_base = '3cbde3a6d3291d05b7193017e699f7d8ed391c9faeb6a4e991116aad99c79c524b9400d5ad8a505606313b82d1ed33e6b6155bb3c2c056ebda97c38dea89eaaf'

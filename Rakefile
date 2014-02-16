@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Laguiltiere::Application.load_tasks
+Laguiltiere2::Application.load_tasks

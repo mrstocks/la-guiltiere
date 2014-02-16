@@ -1,4 +1,4 @@
-Laguiltiere::Application.configure do
+Laguiltiere2::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -24,7 +24,7 @@ Laguiltiere::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :sass
+  # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -77,19 +77,4 @@ Laguiltiere::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  
-  # Mailer
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => ENV["DOMAIN"] }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: ENV["SMTP_SERVER"],
-    openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    port: ENV["SMTP_PORT"],
-    domain: ENV["MAILER_DOMAIN"],
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["SMTP_USER"],
-    password: ENV["SMTP_PWD"]
-  }
 end

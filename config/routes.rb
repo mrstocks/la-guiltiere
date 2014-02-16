@@ -1,9 +1,8 @@
-Laguiltiere::Application.routes.draw do
-  
+Laguiltiere2::Application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  
-  get '/rates(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+	get '/rates(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   root "pages#home"    
 
@@ -27,11 +26,4 @@ Laguiltiere::Application.routes.draw do
 
   get "prices", :controller => "prices", :action => :index  
 
-  devise_for :users
-  
-  #namespace :admin do
-  #  root "base#index"
-  #  resources :users
-  #end
-  
 end

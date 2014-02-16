@@ -1,5 +1,5 @@
 ActiveAdmin.register Slider do
-  permit_params :filename, :title
+  permit_params :name, :filename
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -13,14 +13,5 @@ ActiveAdmin.register Slider do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  form :html => { :enctype => "multipart/form-data" } do |f|
-    f.inputs "Please select a new slider" do 
-      f.input :title
-      f.inputs "filename" do
-        f.input :filename, :as => :file
-      end
-      f.actions
-    end
-  end
-
+  
 end
