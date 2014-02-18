@@ -1,15 +1,19 @@
 Laguiltiere2::Application.routes.draw do
 
+  resources :pages
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-	get '/rates(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+  get '/rates(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   root "pages#home"    
 
+  get 'pages/:id' => 'pages#index'
   # About section 
-  get "about_the_house", to: 'pages#about_the_house', as: "about_the_house"
-  get "about_the_gardens", to: 'pages#about_the_garden', as: "about_the_garden"
-  get "about_the_caravans", to: 'pages#about_the_caravan', as: "about_the_caravan"
+  #get "about_the_house", to: 'pages#about_the_house', as: "about_the_house"
+  #get "about_the_gardens", to: 'pages#about_the_garden', as: "about_the_garden"
+  #get "about_the_caravans", to: 'pages#about_the_caravan', as: "about_the_caravan"
 
   get "home", to: "pages#home", as: "home"
 

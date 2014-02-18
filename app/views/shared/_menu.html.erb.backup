@@ -4,6 +4,18 @@
                 <nav>
                     <ul class="sf-menu">
                         <li <% if ((controller.controller_name == "pages") && (controller.action_name == "home"))%> class="current" <% end %>><%= link_to "Home", root_url %></li>
+                        <li <% if ((controller.controller_name == "pages") && (controller.action_name != "home"))%> class="current" <% end %>><%= link_to "About the house", about_the_house_path %>
+                            <ul>
+                                <li><%= link_to "Garden", about_the_garden_path %></li>
+                                <li><%= link_to "Caravane", about_the_caravan_path %></li>
+                                <li><a href="#">Around here</a>
+                                    <ul>
+                                        <li><a href="#">Lassay les chateaux</a></li>
+                                        <li><a href="#">Bagnoles de L'ornes</a></li>
+                                    </ul>
+                                </li>
+                           </ul>
+                        </li>
                         <li <% if controller.controller_name == "calendar" %> class="current" <% end %>><%= link_to "Rates", calendar_path %></li>
                         <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Inquiries", inquiries_path %></li>
 			<li <% if controller.controller_name == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>
