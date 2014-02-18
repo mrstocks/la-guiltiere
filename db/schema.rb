@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140218215405) do
 
   create_table "active_admin_comments", force: true do |t|
@@ -92,5 +93,5 @@ ActiveRecord::Schema.define(version: 20140218215405) do
     t.datetime "created"
     t.datetime "modified"
   end
-
+ActiveRecord::Schema.define(version: 0) do
 end
