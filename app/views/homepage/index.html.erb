@@ -1,0 +1,124 @@
+<%= content_for :header_banner do %>
+    <div class="bg-1">
+        <h1><%= link_to image_tag("logo.png"), root_url %></h1>
+    </div>
+<% end %>
+
+<%= content_for :stylesheet do %>
+    <%= stylesheet_link_tag "camera"; %>
+<% end %>
+
+<%= content_for :javascript do %>
+  <%= javascript_include_tag "camera"; %>
+<% end %>
+
+<%= content_for :script do %>
+    <script>
+        $(window).load(function() {
+            jQuery('#camera_wrap_1').camera({
+                height: '40.7%',
+                playPause: false,
+                time: 8000,
+                transPeriod: 1000,
+                fx: 'simpleFade',
+                loader: 'none',
+                minHeight:'150px',
+                navigation: false,
+                pagination: true,
+            });
+        })
+    </script>
+<% end %>
+
+
+    <div class="slider clearfix">
+        <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <%=raw slider(@sliders); %>
+
+        </div>
+    </div>
+    <div class="bord-1">
+        <div class="container_12">
+            <div class="row">
+                <div class="grid_12 bord-2">
+                    <div class="title-1">Welcome to La Guiltiere</div>
+                    <h2>Country House and Gardens</h2>
+                    <div class="text-1">
+                      Deep in the hart of the Normandy countryside, La Guiltiere is the perfect place for a traditional family holiday. Loads of space for children to play, animals, gypsy caravan play house, flower gardens, bugs bees and butterflies.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="row">
+            <div class="grid_4 box-1">
+                <div class="img-bord"><%= image_tag('page-1_img-1.png'); %></div>
+                <div class="title-2">House</div>
+                <div>
+                  <p>The house has 4 double bedrooms, a big bright modern kitchen, dining room with open fire and an elegant but comfy sitting room with both french or english TV, broadband wifi internet conection.</p>
+                  <p>The house is centrally heated and good quality linen and towels are provide. We do not make a cleaning charge but ask guest, as far as is possible, to leave as found particulary in peak season when change overs are on the same day.</p>
+                </div>
+                <a href="#" class="link">more</a>
+            </div>
+            <div class="grid_4 box-1">
+                <div class="img-bord"><%= image_tag("page-1_img-2.png"); %></div>
+                <div class="title-2">Gardens</div>
+                <div>
+                  <p>There are several gardens. The house has its own private garden, mainly lawn with ornamental box hedge and flower beds. The garden is enclosed and safe for small children.</p>
+                  <p>The cut flower is just wonderful in the spring and summer months. We grow mainly old fastioned cottage garden flowers and invite our guests to help themselves.</p>
+                  <p>The main garden behind the house is more formal and where I let my horticultural passion flow free.</p>
+                  <a href="#" class="link">more</a>
+               </div>
+            </div>
+            <div class="grid_4 box-1">
+                <div class="img-bord"><%= image_tag ("page-1_img-3.png") %></div>
+                <div class="title-2">Gypsy Caravan</div>
+                <div>
+                  <p>The caravan is full size and ful of treasure of all kinds. Everything from princess gowns to dinky cars. Boules, badmington and swinging chairs in the oak tree just outside.</p>
+                  <p>We have chickens, rabbits, ponies and a donkey. Cats dogs and all.</p>
+                  <p>Egg collecting is a very popular activity and Cirise the donkey never says no to a carrot..</p>
+                </div>
+            <a href="#" class="link">more</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-2">
+        <div class="container_12">
+            <div class="row">
+                <div class="grid_4">
+                    <h2>most popular info</h2>
+                    <ul class="list">
+                        <li><a href="#">Restaurants &amp; Bars </a></li>
+                        <li><a href="#">Weddings</a></li>
+                        <li><a href="#">useful advice</a></li>
+                        <li><a href="#">private dining &amp; celebrations</a></li>
+                        <li><a href="#">Health &amp; Fitness</a></li>
+                        <li><a href="#">hotel photos &amp; videos</a></li>
+                        <li><a href="#">Car rentals</a></li>
+                    </ul>
+                </div>
+                <div class="grid_8">
+                    <h2>testimonials</h2>
+                    <div class="quote">
+                        <blockquote>
+                       We were two adults and four children. The home both inside and out is fully appointed with everything you could need or want. The property and the gardens are stunning. All the rooms in the home are big,comfortable and beautifully decorated. It is close to many things to see and do, both active and passive. You could easily stay a week and not be close to bored. The children did not want to leave.<br />
+It is an easy 2 1/2 hour drive from Paris, but a world away. It is convenient to casual, local or fine dining.<br />
+We made breakfast every day, then ate out in a different village every afternoon then enjoyed wine and cheese et al at home.<br />
+You can't go wrong, we shall return.<br />
+Thank You Jen!<br />
+<br />
+Harry
+                        </a></blockquote>
+                        <div class="clearfix">
+                           <%= image_tag("page-1_img-4.jpg"); %>
+                            <div>
+                                <h3>Alice Puse</h3>
+                                <a href="#" class="color-1 h-underline">www.demolink.org</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

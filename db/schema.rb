@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140218215405) do
+ActiveRecord::Schema.define(version: 20140219150044) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,6 +46,25 @@ ActiveRecord::Schema.define(version: 20140218215405) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "documents", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "intro"
+    t.text     "main"
+  end
+
+  add_index "documents", ["slug"], name: "index_documents_on_slug", unique: true, using: :btree
+
+  create_table "documentsimages", force: true do |t|
+    t.string   "filename"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "document_id"
+  end
+
   create_table "events", force: true do |t|
     t.string   "name"
     t.datetime "start_at"
@@ -68,17 +86,6 @@ ActiveRecord::Schema.define(version: 20140218215405) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "pages", force: true do |t|
-    t.string   "title"
-    t.string   "slug"
-    t.text     "intro"
-    t.text     "main"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
-
   create_table "sliders", force: true do |t|
     t.string   "name"
     t.string   "filename"
@@ -93,5 +100,5 @@ ActiveRecord::Schema.define(version: 20140218215405) do
     t.datetime "created"
     t.datetime "modified"
   end
-ActiveRecord::Schema.define(version: 0) do
+
 end

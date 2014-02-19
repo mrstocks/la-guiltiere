@@ -3,7 +3,16 @@
             <div class="grid_12">
                 <nav>
                     <ul class="sf-menu">
-                        <li <% if ((controller.controller_name == "pages") && (controller.action_name == "home"))%> class="current" <% end %>><%= link_to "Home", root_url %></li>
+                        <li <% if controller.controller_name == "homepage" %> class="current" <% end %>><%= link_to "Home", root_url %></li>
+                
+<li> <a href="#">Publication</a>
+  <ul>
+<% @documents = Document.find(:all) %>
+<% @documents.each do |p| %>
+   <li <% if controller.controller_name == "documents" %> class="current" <% end %>><%= link_to p.name, document_path(p.slug)%></li>
+<% end %> 
+  </ul>
+</li>
                         <li <% if controller.controller_name == "calendar" %> class="current" <% end %>><%= link_to "Rates", calendar_path %></li>
                         <li <% if controller.controller_name == "booking"%> class="current" <% end %>><%= link_to "Inquiries", inquiries_path %></li>
 			<li <% if controller.controller_name == "rooms"%> class="current" <% end %>><%= link_to "Rooms", rooms_path %></li>

@@ -4,4 +4,5 @@ module ApplicationHelper
       @title = "#{value} | Laguiltiere"      
     end
   end
+
 end

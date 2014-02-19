@@ -25,8 +25,7 @@ end
 gem 'kaminari', '~> 0.15.0'
 
 # Slugs and friendly id's
-gem 'friendly_id', '~> 5.0.2'
-
+gem 'friendly_id', 	:github => "norman/friendly_id" 
 # font-awesome
 gem 'font-awesome-sass', '~> 4.0.2'
 
@@ -49,5 +48,5 @@ gem 'inherited_resources', :github => 'josevalim/inherited_resources'
 gem 'ransack',             :github => 'ernie/ransack'
 gem 'activeadmin',         :github => 'gregbell/active_admin'
 gem 'formtastic',          :github => 'justinfrench/formtastic'
-gem "carrierwave"
 gem 'passenger'
+gem 'active_admin_editor'
